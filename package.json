@@ -7,16 +7,20 @@
     "aframe-particle-system-component": "^1.0.10",
     "aframe-react": "^4.3.0",
     "ar.js": "^1.4.10",
+    "gh-pages": "^1.0.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   },
   "devDependencies": {
     "react-scripts": "1.0.11"
   },
+    "homepage": "https://swizec.github.io/ar-js-experiment",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+      "eject": "react-scripts eject",
+      "predeploy": "npm run build",
+      "deploy": "gh-pages -d build"
   }
 }

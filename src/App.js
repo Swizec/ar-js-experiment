@@ -10,13 +10,16 @@ import { Scene, Entity } from 'aframe-react';
 
 class App extends Component {
     render() {
+        const skinUrl = '/skins/jetienne.png';
+
         return (
             <div className="App">
                 <Scene artoolkit={{sourceType: 'webcam', trackingMethod: 'best'}}>
 
                     <a-anchor hit-testing-enabled="true">
-                        <a-entity minecraft minecraft-head-anim="yes" minecraft-body-anim="hiwave" material='opacity: 0.5' />
-                        <a-box position='0 0 0.5' material='opacity: 0.5;'></a-box>
+                        <Entity minecraft={`heightMeter: 2; skinUrl: ${skinUrl}`}
+                                minecraft-head-anim="yes"
+                                minecraft-body-anim="hiwave" />
                     </a-anchor>
                     <a-camera-static preset="hiro" />
                 </Scene>

@@ -14,13 +14,13 @@
   "devDependencies": {
     "react-scripts": "1.0.11"
   },
-    "homepage": "https://swizec.github.io/ar-js-experiment",
+  "homepage": "https://swizec.github.io/ar-js-experiment",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-      "eject": "react-scripts eject",
-      "predeploy": "npm run build",
-      "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   }
 }

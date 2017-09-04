@@ -59,7 +59,7 @@ class App extends Component {
     }
 
     render() {
-        const skinUrl = '/skins/jetienne.png';
+        const skinUrl = 'skins/jetienne.png';
         const { missile, missilePos } = this.state;
 
         return (

@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-//import 'aframe';
-/* import 'aframe-particle-system-component';
-   import { Entity, Scene } from 'aframe-react'; */
+import 'aframe-particle-system-component';
+import 'aframe-environment-component';
 
 import { Scene, Entity } from 'aframe-react';
 
@@ -23,6 +22,7 @@ class BallisticMissile extends Component {
         )
     }
 }
+
 
 class App extends Component {
     state = {
@@ -65,17 +65,16 @@ class App extends Component {
         return (
             <div className="App">
                 <Scene artoolkit={{sourceType: 'webcam', trackingMethod: 'best'}}>
-
                     <a-marker type="pattern">
-                        <Entity minecraft={`heightMeter: 2; skinUrl: ${skinUrl}`}
+
+
+                        <Entity minecraft={`heightMeter: 1; skinUrl: ${skinUrl}`}
                                 minecraft-head-anim="yes"
                                 minecraft-body-anim="hiwave" />
-                        {missile ? <BallisticMissile pos={missilePos} /> : null}
+                        <Entity environment="preset: goaland" />
                     </a-marker>
                     <Entity camera />
                 </Scene>
-                <button onClick={() => this.launch()}
-                        style={{position: "absolute", zIndex: 10000, top: '0px'}}>Launch</button>
             </div>
         );
     }
